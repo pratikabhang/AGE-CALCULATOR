@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" type="image/png" href="age.jpg" />
     <title>Age Calculator</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="age.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js"></script>
   </head>
   <body>
-    <h1>Age Calculator</h1>
     <div class="container">
-      <div class="inputs-wrapper">
-        <input type="date" id="date-input" />
-        <button onclick="ageCalculate()">Calculate</button>
-      </div>
-      <div class="outputs-wrapper">
-        <div>
-          <span id="years"> - </span>
-          <p>Years</p>
+      <form>
+        <div class="base">
+          <div class="enter">
+            <h4>Age Calculator</h4>
+          </div>
+          <div class="block">
+            <p class="title">Date</p>
+            <input
+              type="text"
+              name="date"
+              id="date"
+              placeholder="DD"
+              required="required"
+              minlength="1"
+              maxlength="2"
+            />
+          </div>
+          <div class="block">
+            <p class="title">Month</p>
+            <input
+              type="text"
+              name="month"
+              id="month"
+              placeholder="MM"
+              required="required"
+              minlength="1"
+              maxlength="2"
+            />
+          </div>
+          <div class="block">
+            <p class="title">Year</p>
+            <input
+              type="text"
+              name="year"
+              id="year"
+              placeholder="YYYY"
+              required="required"
+              minlength="4"
+              maxlength="4"
+            />
+          </div>
         </div>
-        <div>
-          <span id="months"> - </span>
-          <p>Months</p>
+        <div class="base">
+          <div class="enter">
+            <input
+              type="button"
+              name="submit"
+              value="Get Age"
+              onclick="getage()"
+            />
+          </div>
         </div>
-        <div>
-          <span id="days"> - </span>
-          <p>Days</p>
-        </div>
-      </div>
+        <div id="age"></div>
+      </form>
     </div>
-    <script src="js/script.js"></script>
+    <body>
+      <html></html>
+    </body>
   </body>
 </html>
